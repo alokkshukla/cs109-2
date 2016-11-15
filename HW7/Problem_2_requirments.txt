@@ -1,0 +1,38 @@
+Part 2(a): A simple decision tree model
+
+
+- Fit a simple decision tree of depth 2 to the training set and report its accuracy on the test set. 
+
+- Interpret the way your model performs risk classifcation. 
+- Would you recommend this classifier to Unamed National Bank for making decisions on the loan applications of **real people**? 
+- If yes, make an argument for the merrits of this classifer. 
+- If no, then make necessary changes to the data set and fit a new classifier that you believe is fair to use in practice, 
+- then compare the two classifiers.
+
+
+We have provided you with a function `display_dt` to display the structure of the decision tree in DOT format.
+
+
+Part 2(b): An ensemble of decision trees
+
+- One way to improve the prediciton accuracy for this task is to use an ensemble of decision trees fitted on random samples, as follows: 
+   -given a training set of size n, sample new training sets uniformly with replacement, and fit a decision tree model on each random sample.
+
+  Now, how would you combine the ensemble into a single classifier? There are at lease two ways:
+   - *Random classifier*: predict using a randomly chosen decision tree from the ensemble
+   - *Majority classifier*: predict using the majority vote from decision trees in the ensemble
+   
+   
+
+- We can also fit a *Random Forest* model for our data (`sklearn.ensemble.RandomForestClassifier`).
+
+- Is there a significant difference in the prediction accuracies of the above three approaches on the loan data set? 
+- If so, explain why.
+
+
+**Note:**  The Random Forest approach can easily overfit the training set. 
+- What are the important parameters in `sklearn`'s Random Forest fitting function that influence the model fit? 
+- For the risk assessment task, you **need** to fit your random forest model by using a suitable model selection procedure to tune these parameters.
+
+
+
